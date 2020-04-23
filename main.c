@@ -273,8 +273,8 @@ void game2()
 	};
 
 
-	struct STAR star[MAX];
-	struct player;
+	STAR star[MAX];
+	OBJECT player;
 
 	int score = 0;
 	int bx = 0, by = 0;
@@ -394,7 +394,11 @@ void game3()
 	int player;
 	int count = 0;
 
+	instruction3();
+
 	map();
+
+
 
 	srand(time(NULL));
 
@@ -504,7 +508,26 @@ void instruction2()
 void instruction3()
 {
 
+	map();
 
+
+
+	gotoxy(34, 7);
+	printf("--게임 설명--");
+	Sleep(1000);
+	gotoxy(34, 8);
+	printf("1~100 까지 무작위 수가 주어집니다.");
+	Sleep(1000);
+	gotoxy(34, 10);
+	printf("무작위 수가 플레이어가 제시한 수보다 작으면  LOW");
+	Sleep(1000);
+	gotoxy(34, 12);
+	printf("무작위 수가 크면 HIGH 입니다.");
+	Sleep(1000);
+	gotoxy(34, 14);
+	printf("숫자를 맞추게 되면 게임이 종료됩니다.");
+	Sleep(3000);
+	system("cls");
 
 }
 
